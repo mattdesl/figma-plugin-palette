@@ -1,0 +1,19 @@
+{
+  "name": "figma-plugin-palette",
+  "version": "1.0.0",
+  "description": "A Figma plugin",
+  "scripts": {},
+  "keywords": [],
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "alias": {
+    "figma-plugin-palette": "./src/"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  },
+  "dependencies": {
+    "get-rgba-palette": "^2.0.1"
+  }
+}

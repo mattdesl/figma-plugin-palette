@@ -1,0 +1,7 @@
+{
+  "name": "Image Palette",
+  "api": "0.6.0",
+  "main": "image-palette.main.js",
+  "ui": "image-palette.html",
+  "id": "731841207668879837"
+}
