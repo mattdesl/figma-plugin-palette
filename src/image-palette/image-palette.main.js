@@ -1,5 +1,4 @@
 import { main as io } from 'figma-plugin-palette/util/io';
-import { showMessage } from 'figma-plugin-palette/util/ui';
 
 const TIMEOUT = 7500;
 const PALETTE_COUNT = 5;
@@ -96,7 +95,7 @@ function createPaletteGroup (node, palette) {
   const selectedImages = getSelectedImageNodes();
 
   if (selectedImages.length === 0) {
-    await showMessage('You must select at least one image.');
+    figma.closePlugin('You must select at least one image.');
   } else {
     // Show hidden decoder UI
     figma.showUI(__html__, { visible: false });
@@ -117,7 +116,6 @@ function createPaletteGroup (node, palette) {
     }, Promise.resolve());
 
     figma.currentPage.selection = groups;
+    figma.closePlugin();
   }
-
-  figma.closePlugin();
 })();
